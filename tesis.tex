@@ -1,0 +1,277 @@
+\documentclass[12pt,a4paper,oneside,reqno]{book}%no cambiar
+\usepackage[lmargin=2.5cm,rmargin=2.5cm,tmargin=3.0cm,bmargin=3.0cm]{geometry}%no cambiar
+\usepackage{a4}%no cambiar
+\usepackage[spanish,english]{babel}%no cambiar
+\usepackage[utf8]{inputenc} %no cambiar
+\usepackage[T1]{fontenc} %no cambiar
+\usepackage{latexsym}%no cambiar
+\usepackage[dvips]{graphicx}%no cambiar
+\usepackage{graphicx,color,wrapfig}%no cambiar
+\definecolor{pucp}{rgb}{0, 0.125, 0.376}%no cambiar
+\usepackage{amstext,amsfonts,amsmath,amsthm,graphicx,amssymb,amscd,epsfig}%%no cambiar
+\usepackage{amsbsy}%no cambiar
+\usepackage{fancyhdr}%no cambiar
+\usepackage{psfrag}%no cambiar
+\usepackage{imakeidx}
+\usepackage{tikz-cd}
+\usepackage{cancel}
+\makeindex
+%\usepackage{hyperref}
+%\usepackage{apacite}
+%--------------------------------------------------------------------
+% Configuraci\'{o}n del formato de cabecera
+%\fancyhead[RE,RO]{}% no cambiar
+\rhead{\thepage}% no cambiar
+\fancyfoot{}% no cambiar
+\fancyfoot[RO,LE]{\slshape\hrulefill\\ \thepage}%% no cambiar
+\fancyfoot[LO,RE]{\slshape\hrulefill\\ \textsc{pucp}}% no cambiar
+%-----------------------------------------------------------------------------------------
+\newtheorem{paragrafo}{}[section]
+\newtheorem{teo}[paragrafo]{Teorema}
+\newtheorem{lem}[paragrafo]{Lema}
+\newtheorem{prop}[paragrafo]{Proposici\'{o}n}
+\newtheorem{coro}[paragrafo]{Corolario}
+\theoremstyle{definition}
+\newtheorem{defi}[paragrafo]{Definici\'{o}n}
+\newtheorem{ejm}[paragrafo]{Ejemplo}
+\newtheorem{xca}[paragrafo]{Exercise}
+%%%\theoremstyle{remark}
+\newtheorem{obs}[paragrafo]{Observaci\'{o}n}
+%\theoremstyle{problem}
+%\newtheorem{problem}[paragrafo]{Problema}
+%\theoremstyle{propiedades}
+%\newtheorem{propiedades}[paragrafo]{Propiedades}
+%\numberwithin{equation}{chapter}
+%----------------------------------------------------
+\renewcommand{\baselinestretch}{1.20} %no cambiar
+\pretolerance=200000 \tolerance=300000 %NO CAMBIAR
+%---------------------------------------------------------------------------
+\begin{document}
+\thispagestyle{empty}%%%%no cambiar
+\bigskip%%%%no cambiar
+
+\begin{center}
+{\baselineskip 30pt \Large Pontificia Universidad Cat\'{o}lica del Per\'{u}}\\%%%%no cambiar
+{\baselineskip 30pt\large Escuela de Posgrado}%%%%no cambiar
+\bigskip %%%%no cambiar
+\end{center}%%%%no cambiar
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% incluye el logotipo de la uniersidad
+\begin{figure}[htb]%%%%no cambiar
+\begin{center}%%%%no cambiar
+  %\includegraphics[width=9.5cm]{capa.eps}%%%% LOGO
+   \includegraphics[width=9.5cm]{logo2020}%%%% LOGO SIGLAS
+\end{center}%%%%no cambiar
+\end{figure}%%%%no cambiar
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+\begin{minipage}{14.0cm} %%%%no cambiar
+\begin{center}
+\textcolor{pucp}{\bf \Huge T\'itulo de la tesis, debe ser id\'entico  al registrado} \index{Car\'atula}% al concluir retire este \index que se presenta como ejemplo
+%% incluya el título
+\end{center}
+\end{minipage}
+\end{center}
+\vspace*{2.00cm}
+\begin{center}
+Tesis para optar el grado acad\'emico de \\% no cambiar
+Mag\'ister en Matem\'aticas  %%no cambiar
+\end{center}
+%
+\vspace*{2.00cm}%%%%no cambiar
+%
+\begin{center}
+Autor \\%%%%%%no cambiar
+%\textbf{\sc  nombres y apellidos del graduando, \\ id\'enticos al documento de identidad}
+\textbf{\sc  Diego Camilo Arenas Mata}
+%% incluya su nombre
+\end{center}
+%
+\vspace*{0.5cm}%%%%no cambiar
+%
+\begin{center}
+Asesor \\%%
+%\textbf{\sc  nombres y apellidos del asesor \\ según registro de su DNI} %% inlcuya el nombre completo del asesor
+\textbf{\sc  Dr. Percy Braulio Fern\'andez S\'anchez} %% inlcuya el nombre completo del asesor
+\end{center}
+%
+\vspace*{1.00cm}
+%
+\begin{center}
+{\baselineskip 10pt {\bf Lima - Per\'u} \\ % no cambiar
+%{\bf mes - a\~{n}o}} % incluir los datos adeucados
+{\bf mes - 2021}} % incluir los datos adeucados
+\end{center}
+
+\newpage %------------------------------------------------------------------------------------------
+\thispagestyle{empty}%%%%no cambiar
+\bigskip%%%%no cambiar
+\begin{center}%%%%no cambiar
+\textsc{t\'itulo de la tesis\footnote{Version final con las correcciones del jurado}}%sólo si es necesario.
+\end{center}
+\smallskip
+\begin{center}%%%%no cambiar
+\textbf{nombre completo del graduando\footnote{proyecto dgi, apoyo financiero}}%% incluya su nombre y comentario sólo si es necesario
+\end{center}
+%
+\par \smallskip %%%%no cambiar
+%%%%no cambiar
+Tesis presentada en la Escuela de Posgrado de la Pontificia Universidad Cat\'olica del Per\'u ({\sc pucp}) para obtener el grado acad\'emico de Mag\'ister en Matem\'aticas. %no cambiar
+\par
+\vspace*{0.5cm}
+%
+Miembros de Jurado:
+
+\vspace*{2cm}
+
+\begin{center}
+\begin{tabular}{c}
+{\footnotesize \rule{7cm}{0.0009cm}} \\
+{\footnotesize Dr. nombre del presidente del jurado, \textsc{xxxx}}\\
+%% "nombre" cambiar por el NOMBRE CON EL QUE CITA,
+%%xxxx los acronimos autorizados de la universidad del jurado
+{\footnotesize (Presidente del jurado)}\\%no cambiar
+\\
+\end{tabular}
+\end{center}
+
+\vspace*{1cm}
+
+\begin{center}
+\begin{tabular}{c}
+{\footnotesize \rule{7cm}{0.0009cm}} \\
+{\footnotesize Dr. nombre del asesor, \textsc{pucp}}\\
+%% "nombre" se cambia por el  "nombre" cambiar por el NOMBRE CON EL QUE CITA al asesor
+{\footnotesize (Asesor) }\\% no cambiar
+\\
+\end{tabular}
+\end{center}
+
+\vspace*{1cm}
+
+\begin{center}
+\begin{tabular}{c}
+{\footnotesize \rule{7cm}{0.0009cm}} \\
+{\footnotesize Dr. nombre del jurado, \textsc{yyyy}}\\
+%% "nombre" cambiar por el NOMBRE CON EL QUE CITA,
+%%  yyyy los acronimos autorizados de la universidad del jurado
+{\footnotesize (Tercer miembro)}\\%no cambiar
+\\
+\end{tabular}
+\end{center}
+%
+\vspace*{1.5cm}
+%
+\begin{center}
+{\baselineskip 10pt {\bf Lima - Per\'u}\\
+{\bf mes - a\~{n}o}}%incluir los datos correctos
+\end{center}
+%----------------------------------------------resumen---------------------------------------------------------
+\chapter*{Resumen}
+\thispagestyle{empty}
+\begin{center}
+\textsc{t\'itulo de la tesis}% incluir el título
+\end{center}
+\begin{center}
+nombre del graduando % incluir el nombre completo del graduando
+\end{center}
+\begin{center}
+ a\~{n}o % incluir el año de la sutentacion
+\end{center}
+\par
+Asesor: nombre del asesor% cambiar "nombre del asesor" por el nombre completo del asesor, nombre y apellidos
+\par
+T\'itulo obtenido: Mag\'ister en Matem\'aticas %no cambiar
+%
+\smallskip %no cambiar
+%
+\begin{center}%no cambiar
+\rule{14.50cm}{0.03cm}%no cambiar
+\smallskip%no cambiar
+\end{center}%no cambiar
+\noindent
+Incluya el resumen de la tesis y tome en cuenta el contexto adecuado de los t\'opicos considerados en el trabajo de tesis, pero evite cualquier apreciaci\'on y juicio cr\'itico.
+Es razonable que por medio del resumen se d\'e una descripci\'on clara de los objetivos de la tesis, se indique cuales se lograron, se presenten los m\'etodos que se utilizaron y se concluya con la presentaci\'on de los aportes del trabajo final, en el \'ambito de las matem\'aticas.
+Si es posible, cite la referencia principal.
+De acuerdo con  \cite{guiaFONDO}, el resumen se escribe en un \'unico p\'arrafo ($200$ a $300$ palabras)  y en tiempo verbal presente.
+%
+\vspace*{1cm}
+\par
+\textbf{Palabras clave:} palabra clave 1, palabra clave 2, palabra clave 3%%%
+\par
+Las palabras clave en castellano deben incluirse con min\'uscula inicial (salvo que se trate de nombres propios o siglas).
+%
+%-----resumen en ingles------------------------------------------------------------------
+\chapter*{Abstract}
+\thispagestyle{empty}
+\noindent
+Haga y escriba aqu\'i una traducci\'on precisa del resumen del trabajo de tesis.
+Para presentar adecuadamente las palabras clave junto a la clasificaci\'on universalmente aceptada, se debe utilizar la informaci\'on presentada en la siguiente enlace:  \emph{https://mathscinet.ams.org/mathscinet/msc/msc2010.html}
+%
+\bigskip
+\par
+  \textbf{Key words and phrases.} Inlcluir las palabras claves en ingles, estas podrian aparecer con mayusculas.
+\par
+  \textbf{2010 Mathematics Subject Classification.} Primary 00A35, 00A15;  Secondary 97E99, 00A06.
+
+\newpage %-------------------------------------------------------------
+\thispagestyle{empty}
+\vspace*{19cm}
+
+\begin{flushright}
+\begin{minipage}{6cm}
+{\baselineskip 20pt
+\ldots~ dedicatoria\dots} % inlcuir la dedicatoria de la tesis
+\end{minipage}
+\end{flushright}
+
+\pagestyle{plain} \pagenumbering{roman} \setcounter{page}{6}
+
+%--------------------------------------------------------------------
+\selectlanguage{spanish}
+\tableofcontents % nos da indice
+%----------------------------------------------------------------------
+\selectlanguage{spanish}
+\listoffigures.% una lista de las figuras
+%\fancyfoot[C]{\thepage} % para que en el pie de pagina salga el numero .
+%--------------------------------------------agradecimientos---------------------------------------------------------
+\chapter*{Agradecimiento}
+\thispagestyle{empty}
+\vspace{-0.5cm}
+En esta parte se escribe cada agradecimiento y su raz\'on a todos aquellos a los que se decida hacer presente un agradecimiento, ya que hicieron posible que la tesis se termine.
+Cuando sea el caso, se incluyen a las instituciones que financiaron el desarrollo de la tesis.
+\begin{verse}
+A Dios, por \dots\\
+A mis padres, por \dots\\
+A mis abuelitos \dots\\
+A mis profesores y compa\~{n}eros \dots\\
+A los funcionarios de la facultad \dots\\
+\end{verse}
+
+\textsc{Otro ejemplo:}
+
+Agradezco a Dios por bendecirme, por guiarme, por ser apoyo y fortaleza en momentos de dificultad y de debilidad; por regalarme el don de saber que siempre est\'a a mi lado y por permitir que concluya un proyecto m\'as en la vida.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\pagestyle{fancy}
+\include{introduccion}
+\include{cap1}
+\include{cap2}
+\include{cap3}
+\include{cap4}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\include{apendice1}
+%---------------------------------referencias
+%\pagestyle{plain}
+\addcontentsline{toc}{chapter}{Bibliograf\'ia}
+%\bibliographystyle{amsplain}
+\bibliographystyle{amsalpha}
+\bibliography{referenciasTesis}
+\newpage%%%%---------------------------------------------------------------------index
+\selectlanguage{spanish}
+\clearpage
+\addcontentsline{toc}{chapter}{\'Indice}
+\backmatter
+\printindex
+\end{document}

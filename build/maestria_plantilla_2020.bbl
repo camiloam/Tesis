@@ -1,0 +1,32 @@
+\providecommand{\bysame}{\leavevmode\hbox to3em{\hrulefill}\thinspace}
+\providecommand{\MR}{\relax\ifhmode\unskip\space\fi MR }
+% \MRhref is called by the amsart/book/proc definition of \MR.
+\providecommand{\MRhref}[2]{%
+  \href{http://www.ams.org/mathscinet-getitem?mr=#1}{#2}
+}
+\providecommand{\href}[2]{#2}
+\begin{thebibliography}{dCF16}
+
+\bibitem[Cc12]{cas2012}
+Montserrat Castello~(coord.), \emph{Escribir y comunicarse en contextos
+  cient\'ificos y acad\'emicos: conocimientos y estrategias}, Cr\'itica y
+  fundamentos \textbf{15}, Editorial GRA\'O, de \textsc{irif, s.l.}, 2012,
+  Pr\'ologo de Anna Camps.
+
+\bibitem[dCF16]{da2016trabajo}
+Iria da~Cunha~Fanego, \emph{El trabajo de fin de grado y de m{\'a}ster:
+  redacci{\'o}n, defensa y publicaci{\'o}n}, Ling{\"u}{\'\i}stica y
+  traducci{\'o}n, Universitat Oberta de Catalunya, UOC, 2016, Pr\'ologo de M.
+  Teresa Cabr\'e.
+
+\bibitem[dV16]{guiaFONDO}
+M.$^{a}$ \'Angeles Fern\'andez \&~Julio del Valle, \emph{C\'omo iniciarse en la
+  investigaci\'on acad\'emica. una gu\'ia pr\'actica}, PUCP - Fondo Editorial,
+  2016, Prefacio Pablo Quintanilla.
+
+\bibitem[Gut12]{MR3052697}
+Olivia Gut\'{u}, \emph{Peque\~{n}a guia de ortograf\'ia y estilo para escribir
+  matem\'aticas en espa\~{n}ol}, Miscel\'anea Mat. (2012), no.~54, 69--80.
+  \MR{3052697}
+
+\end{thebibliography}

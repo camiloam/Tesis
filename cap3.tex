@@ -1,0 +1,189 @@
+\pretolerance=20000\tolerance=30000
+\selectlanguage{spanish}
+\pagestyle{fancy}
+\chapter[Tercer cap\'itulo]{El Teorema de Hodge}\label{cap:3}
+\vspace*{1cm}
+\begin{center}
+\begin{minipage}{12cm}
+%------------------------------------------------
+\texttt{\baselineskip 10pt
+\begin{flushright}
+pude introducir una cita\\
+de su elecci\'on.\\
+{\sf Autor de la cita.}
+\end{flushright}}
+%-------------------------------------
+\textsl{\baselineskip 10pt
+El objetivo de este capítulo es demostrar el Teorema de descomposición de Hodge. Este dice que toda p-forma sobre una variedad riemanniana compacta se puede escribir como la suma de una componente $\alpha$, solución de la ecuación $\Delta \alpha = \omega$, donde $\Delta$ es el operador de Laplace-Beltrami, y una componente armónica (en el núcleo de $\Delta$). Como corolario de este teorema se verá además que existe una única forma armónica para cada clase de cohomología. La demostración de este teorema es extensa y hace uso de de la teoría de operadores elípticos y de espacios de Sobolev.}
+\end{minipage}
+\end{center}
+
+\section{El operador de Laplace-Beltrami}%
+
+
+
+
+
+
+%
+\section{Espacios de Sobolev}%
+%
+
+\begin{defi} Sea $S$ el espacio vectorial complejo de sucesiones de vectores en $\mathbb{C}^m$ con índice dado por una n-tupla $\xi = (\xi_1, \ldots, \xi_n)$. Dado un entero $s$, el espacio de Sobolev $H_s$ es el subespacio de $S$ dado por
+\[H_s = \{u \in S: \sum_\xi (1+|\xi|^2)^s\,|u_\xi|^2 < \infty\}\].
+\end{defi}
+
+
+
+
+
+
+\section{Operadores elípticos}%
+%
+\begin{defi}
+Sea $L$ un operador diferencial parcial de orden $l$. escribimos $L$ como
+\[L = P_1(D) + \ldots + P_l(D)\].
+Donde $P_j(D)$ es una matriz $m \times m$, que tiene en cada una de sus entradas un operador diferencial $\sum\limits_{[\alpha] = j}a_\alpha D^\alpha$, homogéneo de orden $j$, y donde los $a_\alpha$ son funciones $C^\infty$ sobre $\mathbb{R}$ con valores en $\mathbb{C}$.\\
+Denótese $P_j(\xi)$ la matriz obtenida al sustituir $\xi^\alpha$ para $D^\alpha$ en $P_j(D)$, donde $\xi = (\xi_1, \ldots, \xi_n)$ es un punto en $\mathbb{R}^n$. Se dice que $L$ es \textbf{elíptico en el punto x} $\in \mathbb{R}$ si la matriz $P_j(\xi)$ es no singular en x para todo $\xi \neq 0$. L es \textbf{elíptico} si es elíptico en todo $x$.
+\end{defi}
+
+
+\begin{lem} Un operador diferencial parcial $L$ es elíptico si y solo si,para todo $x \in M$, toda función $C^\infty$ $\phi\colon M \to \mathbb{R}$ con $\phi(x) = 0$ y $d\phi(x) \neq 0$ y toda forma $\alpha$ en $M$ se tiene
+\begin{equation}
+    \Delta(\phi^2\alpha)(x) \neq 0
+\end{equation}
+\end{lem}
+\begin{proof}
+Poo poo pee pee
+\end{proof}
+
+
+
+
+
+
+
+
+%
+\section{Elipticidad del operador de Laplace-Beltrami}%
+
+Resta un último ingrediente para la finalizar la demostración del Teorema de Hodge: la prueba de que, como se aseguró previamente, este es un operador elíptico. Con este fin, se presentan los siguientes lemas.\\
+\begin{lem}
+Dada una secuencia exacta de espacios vectoriales con producto interno, \( U \xrightarrow{\text{T}} V \xrightarrow{\text{S}} W\), con $T^{*}\colon V \to U$ y $S^{*}\colon W \to V$ aplicaciones adjuntas de T y S respectivamente. Se tiene que \(S^{*}S+TT^{*}\) es un isomorfismo.
+\end{lem}
+
+\begin{proof}
+Sea $v\in V$ diferente de 0, se mostrará que $S^{*}S+TT^{*}$ es diferente de 0. Se tiene que \[\langle (S^{*}S+TT^{*})v,v\rangle = \langle S^{*}Sv, v\rangle + \langle TT^{*}v, v\rangle = \langle Sv, Sv\rangle + \langle T^{*}v, T^{*}v\rangle = \|Sv\|^2+\|Tv\|^2,\]\
+Entonces, si $Sv \neq 0$, $\|Sv\|^2+\|T^{*}v\|^2 > 0$.
+
+Si $Sv = 0$, $v\in kerS$, y como la secuencia es exacta, $v\in ImT$. Nótese, por otro lado, que $T^{*}$ es inyectivo en $ImT$ (pues, si $T^{*}w = 0$, para $w = Tu$, para algún $u\in V$, entonces $\langle Tu,Tu \rangle = 0$ y $w = Tu = 0$). De ahí se obtiene que $T^{*}v \neq 0$, lo que implica, de nuevo, que $\|Sv\|^2+\|T^{*}v\|^2 > 0$.\\
+\end{proof}
+
+Sea $\hat\xi\colon\bigwedge T_xM \to
+\bigwedge T_xM$ la aplicación lineal dada por $\hat\xi\, (\omega) = \xi \wedge \omega$, para $\xi\in T^{*}_xM$, y sea $\hat\xi_k$ su restricción a ${\bigwedge^k T_xM}$. El lema anterior será aplicado a la secuencia de espacios vectoriales
+\begin{equation}
+\label{secuencia}
+\bigwedge^{p-1}T_xM \xrightarrow{\hat\xi_{p-1}}
+\bigwedge^{p}T_xM \xrightarrow{\hat\xi_p}\bigwedge^{p+1}T_xM
+\end{equation}
+
+Estos espacios vectoriales tienen un producto interno dado por \[ \langle \eta,\omega\rangle = \star(\eta \wedge \star\omega)\]
+Esta expresión resulta de aplicar la estrella de Hodge a ambos lados de 
+$\eta \wedge \star\omega = \langle \eta,\omega\rangle \text{vol} $ y del hecho que $\star \text{vol} = 1$.
+Por supuesto, primero se debe verificar que dicha secuencia sea exacta.
+
+\begin{lem}
+La secuencia (\ref{secuencia}) es exacta.
+\end{lem}
+
+\begin{proof}
+Debido que $\xi \wedge \xi \wedge \omega = 0$,   para algún $\xi \wedge \omega$ en $\text{Im}(\xi_{p-1})$, se tiene que también pertenece a $\text{Ker}(\xi_{p})$.\\
+Para la otra inclusión se considera el producto interno previamente definido en $\bigwedge^{k}T_xM$. Se toma una base ortonormal $\{\phi_1,\phi_2, \ldots,\phi_n\}$ y se elige $\phi_1$ de modo que $\xi = \|\xi\|\,\phi_1$. Como $\eta = \sum{a_I\, \phi_I}$, (donde $I = (i_1, i_2,\ldots,i_p)$ y $\phi_I = \phi_{i_1}\wedge\phi_{i_2}\wedge\ldots\wedge \phi_{i_p}$) se tiene que $\xi \wedge \eta = \sum{a_I\,\xi \wedge \phi_I}$.\\
+Si $1 \in I$, $\xi \wedge \phi_I = \|\xi\|\,\phi_1 \wedge \phi_1 \wedge \ldots \wedge \phi_{i_p} = 0$. En caso contrario, $\xi \wedge \phi_I = \|\xi\|\,\phi_1\wedge\phi_I$, que es múltiplo de un elemento de la base de $\bigwedge^{p+1}T_xM$. De estas observaciones, $\xi \wedge \eta = \sum{a_I\,\xi \wedge \phi_I}$ es combinación lineal de elementos de la base de $\bigwedge^{p+1}T_xM$. Como $\xi \wedge \eta = 0$, por independencia lineal, cada elemento de la suma debe ser igual a 0, lo que solo puede ocurrir si $\phi_1 = \xi / \|\xi\|$ es un factor de $\phi_I$, para todo I y por tanto un factor de $\eta$. Es decir, si $\eta = \xi \wedge \nu $, para algún $\nu$.   
+\end{proof}
+
+\begin{lem}
+La adjunta de $\hat\xi_p\colon\bigwedge^{p}T_xM\to\bigwedge^{p+1}T_xM$ es
+\[(-1)^{np}\star\hat\xi\,\star\colon \bigwedge^{p+1}T_xM \to \bigwedge^{p}T_xM\]
+\end{lem}
+
+\begin{proof}
+De las propiedades básicas del operador estrella de Hodge se tiene:
+\begin{align*}
+    \langle \hat \xi_p\eta, \omega \rangle = \langle \xi \wedge \eta, \omega\rangle = \star(\xi \wedge \eta \wedge\star\omega) &= (-1)^p\star(\eta \wedge \xi\wedge\star\omega)\\ &= (-1)^p(-1)^{p(n-p)}\star(\eta \wedge  \star\star(\hat\xi\star\omega)) \\
+    &= (-1)^{np}\langle\eta, \star(\hat\xi\star\omega)\rangle
+\end{align*}
+Así, $(-1)^{np}\star\hat\xi\star$ es la adjunta de $\hat\xi_p$
+\end{proof}
+
+
+De los tres lemas previos, se obtiene que
+\begin{equation}
+\label{isomorfismo}
+    (-1)^{np}\star\hat\xi\star\hat\xi + (-1)^{n(p-1)}\hat\xi\star\hat\xi\star
+\end{equation}
+es un isomorfismo sobre $\bigwedge^{p}T_xM$.
+\\
+
+Ahora, se vio anteriormente que un operador diferencial parcial sobre una variedad $M$ es elíptico si y solo si, para todo $x \in M$, toda función $\phi\colon M \to \mathbb{R}$ de clase $C^\infty$ con $\phi(x) = 0$ y $d\phi(x) \neq 0$ y toda forma $\alpha$ en $M$ se tiene
+\begin{equation}
+\label{eliptico}
+    \Delta(\phi^2\alpha)(x) \neq 0
+\end{equation}
+
+Sea $\alpha$ una p-forma y $d\phi(x) \neq 0 = \xi \in T^*_xM$ y recuérdese que el operador de Hodge está dado por:
+\[\Delta  = (-1)^{np+1}\star d \star d + (-1)^{n(p+1)+1}d\star d\star \]
+
+Aplicando esta fórmula en (\ref{eliptico}) obtenemos, primero, para el primer término:
+\begin{align*}
+\star d\star d(\phi^2 \alpha) &= \star d\star (2\phi\, d\phi\wedge \alpha + \phi^2 d\alpha) \\ 
+&= \star d (2\phi \star (d\phi\wedge \alpha) + \phi^2 \star d\alpha) \\
+&= \star (2d\phi \wedge \star (d\phi\wedge \alpha) + \cancel{2\phi\, d \star (d\phi\wedge \alpha)} + \cancel{d(\phi^2 \star d\alpha)})\\
+&= 2\star \hat\xi \star (\hat\xi\,\alpha)
+\end{align*}
+
+Y para el segundo término:
+\begin{align*}
+d\star d\star(\phi^2 \alpha) &= d\star d(\phi^2 \star\alpha)
+= d\star (2\phi\, d\phi\wedge \star\alpha + \phi^2 d(\star\alpha)) \\
+&= d (2\phi \star (d\phi\wedge \star\alpha) + \phi^2 \star d(\star\alpha)) \\
+&= 2d\phi \wedge \star (d\phi\wedge \star\alpha) + \cancel{2\phi\, d \star (d\phi\wedge \star\alpha)} + \cancel{d(\phi^2 \star d(\star\alpha))}\\
+&= 2\hat\xi \star (\hat\xi \star\alpha)
+\end{align*}
+
+En el punto $x$, se tiene, entonces:
+\begin{equation}
+    \Delta(\phi^2\alpha)(x) = -2[(-1)^{np}\star \hat\xi \star \hat\xi+(-1)^{n(p-1)}\hat\xi \star \hat\xi \star](\alpha(x))
+\end{equation}
+\\
+Como el término entre corchetes es el isomorfismo (\ref{isomorfismo}), hallado gracias a los lemas, y como $\alpha(x) \neq 0$, entonces $\Delta(\phi^2\alpha)(x) \neq 0$. \textbf{Es decir, $\Delta$ es elíptico}.
+
+
+\section{Demostración final}%
+
+\begin{teo}[Regularidad]
+Sea $\alpha_n \in \Omega^p(M)$ y sea $l$ una solución débil de $\Delta\omega = \alpha$. Entonces existe $\omega \in \Omega^p(M)$ tal que
+\[l(\beta) = \langle \omega, \beta\rangle\]
+para todo $\beta \in \Omega^p(M)$. Por lo tanto, $\Delta\omega = \alpha$.
+\end{teo}
+
+
+
+
+\begin{teo}
+Sea $\{\alpha_n\}$ una sucesión de p-formas en M tales que $\|\alpha_n\| \leq c$ y $\|\Delta\alpha_n\| \leq c$ para todo $n$ y para alguna constante $c > 0$. Entonces, existe una subsucesión de $\{\alpha_n\}$ que es sucesión de Cauchy en $\Omega^p(M)$.
+\end{teo}
+
+
+Con esto, tenemos ahora una versión puramente analítica del teorema \ref{}:
+
+
+\begin{teo}[Regularidad]
+Dado $p \in \mathbb{R}^n$, existe una vecidad $U_p$ de $p$ y un elemento $u_p$ de $\mathcal{P}$ tales que $l(\phi) = \langle u_p, \phi\rangle$, para todo $\phi \in C_0^\infty(U_p)$
+\end{teo}
+
+
+
+%
+\section{Consecuencias}%
+A continuación se utilizará el Teorema de Hodge para la demostración de algunos teoremas.
